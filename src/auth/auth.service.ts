@@ -47,11 +47,10 @@ export class AuthService {
     // Save refreshToken to DB
     user.refreshToken = refresh_token;
     await user.save();
-
+    console.log(user, 'user');
     return {
-      access_token,
-      refresh_token,
       user,
+      access_token,
     };
   }
 
